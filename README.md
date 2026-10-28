@@ -1,16 +1,16 @@
-# 🌦️ Eventos Climáticos
+#  Eventos Climáticos
 
-## 📌 Sobre o projeto
+##  Sobre o projeto
 
 O **Eventos Climáticos** é um sistema desenvolvido para registrar e gerenciar eventos climáticos extremos em diferentes cidades. O projeto foi desenvolvido como parte das atividades do curso Técnico em Desenvolvimento de Sistemas do SENAI.
 
 A aplicação permite realizar login, visualizar o usuário conectado e gerenciar registros de eventos climáticos por meio de uma interface integrada a uma API e a um banco de dados relacional.
 
-## 🎯 Objetivo
+##  Objetivo
 
 Desenvolver uma aplicação Full Stack para cadastrar, consultar, atualizar e excluir eventos climáticos, utilizando tecnologias de desenvolvimento web e banco de dados.
 
-## 🛠️ Tecnologias utilizadas
+##  Tecnologias utilizadas
 
 - HTML5
 - CSS3
@@ -22,26 +22,26 @@ Desenvolver uma aplicação Full Stack para cadastrar, consultar, atualizar e ex
 - Insomnia
 - Git e GitHub
 
-## ⚙️ Funcionalidades
+##  Funcionalidades
 
-### 🔐 Login
+###  Login
 - Tela de login para os usuários cadastrados.
 - Validação das credenciais por meio do back-end.
 - Retorno dos dados do usuário.
 
-### 🏠 Página inicial
+###  Página inicial
 - Exibição do nome do usuário logado.
 - Botão para sair do sistema.
 - Acesso ao gerenciamento de eventos climáticos.
 
-### 🌩️ Gerenciamento de eventos climáticos
+###  Gerenciamento de eventos climáticos
 - Cadastro de novos eventos.
 - Listagem dos eventos registrados.
 - Consulta de eventos específicos.
 - Edição das informações cadastradas.
 - Exclusão de registros.
 
-## 📸 Demonstração do sistema
+##  Demonstração do sistema
 
 Nesta seção serão apresentadas imagens das páginas desenvolvidas para o sistema Eventos Climáticos.
 
@@ -49,39 +49,28 @@ Nesta seção serão apresentadas imagens das páginas desenvolvidas para o sist
 
 Tela responsável pelo acesso dos usuários ao sistema.
 
-![Página de Login](./prints/tela-login.png)
+![Página de Login](./prints/cadastro.png)
 
 ### 2. Página Inicial — Home
 
 Página principal que apresenta o nome do usuário conectado e as funcionalidades do sistema.
 
-![Página Inicial](./prints/tela-home.png)
+![Página Inicial](./prints/telainicio.png)
 
 ### 3. Página de Cadastro de Eventos
 
 Formulário utilizado para cadastrar eventos climáticos, informando cidade, tipo de evento, temperatura máxima e nível de impacto.
 
-![Cadastro de Eventos](./prints/cadastro-evento.png)
+![Cadastro de Eventos](./prints/cadastraeventos.png)
 
 ### 4. Página de Listagem de Eventos
 
 Página destinada à visualização dos eventos climáticos registrados no banco de dados.
 
-![Listagem de Eventos](./prints/listagem-eventos.png)
+![Listagem de Eventos](./prints/eventos.png)
 
-### 5. Página de Edição de Eventos
 
-Interface utilizada para modificar os dados de um evento climático já cadastrado.
-
-![Edição de Eventos](./prints/editar-evento.png)
-
-### 6. Página de Exclusão de Eventos
-
-Funcionalidade responsável pela remoção dos registros selecionados.
-
-![Exclusão de Eventos](./prints/excluir-evento.png)
-
-## 🗃️ Banco de dados
+## Banco de dados
 
 O projeto utiliza o banco de dados `eventos`, com duas tabelas principais.
 
@@ -105,7 +94,7 @@ O projeto utiliza o banco de dados `eventos`, com duas tabelas principais.
 
 Um usuário pode possuir vários eventos climáticos cadastrados.
 
-## 🚀 Como executar o projeto
+##  Como executar o projeto
 
 ### 1. Pré-requisitos
 
@@ -199,13 +188,13 @@ eventos/
 
 *Observação: a estrutura deve ser ajustada para corresponder aos arquivos reais do projeto.*
 
-## 👩‍💻 Desenvolvedora
+## Desenvolvedora
 
 **Lívia Morais Pereira**
 
 Curso Técnico em Desenvolvimento de Sistemas — SENAI.
 
-## 📚 Informações acadêmicas
+## Informações acadêmicas
 
 - **Atividade:** Aula 05 — Recursos Avançados: Prisma Seed.
 - **Projeto:** Eventos Climáticos.
