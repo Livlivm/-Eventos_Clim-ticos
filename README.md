@@ -150,43 +150,6 @@ A API estará disponível em:
 
 Abra a pasta `web` no Visual Studio Code e execute a página de login utilizando a extensão Live Server.
 
-## 📂 Estrutura do projeto
-
-```text
-eventos/
-├── api/
-│   ├── prisma/
-│   │   ├── schema.prisma
-│   │   ├── seed.js
-│   │   └── migrations/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── routes/
-│   │   └── data/
-│   ├── .env
-│   ├── .gitignore
-│   ├── prisma.config.ts
-│   ├── server.js
-│   └── package.json
-│
-├── web/
-│   ├── login.html
-│   ├── home.html
-│   ├── css/
-│   └── js/
-│
-├── prints/
-│   ├── tela-login.png
-│   ├── tela-home.png
-│   ├── cadastro-evento.png
-│   ├── listagem-eventos.png
-│   ├── editar-evento.png
-│   └── excluir-evento.png
-│
-└── README.md
-```
-
-*Observação: a estrutura deve ser ajustada para corresponder aos arquivos reais do projeto.*
 
 ## Desenvolvedora
 
