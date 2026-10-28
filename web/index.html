@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Climáticos | Entrar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="login-page">
+    <main class="login-layout">
+        <section class="login-intro">
+            <a class="brand" href="index.html">
+                <span class="brand-icon"><i class="fa-solid fa-cloud-bolt"></i></span>
+                <span>Eventos <span class="brand-light">Climáticos</span></span>
+            </a>
+
+            <div class="intro-content">
+                <span class="eyebrow">● MONITORAMENTO CLIMÁTICO</span>
+                <h1>O clima muda.<br>Esteja <span>preparado.</span></h1>
+                <p>Organize, acompanhe e gerencie eventos climáticos em um só lugar.</p>
+
+                <div class="weather-art">
+                    <div class="weather-orbit"></div>
+                    <i class="fa-solid fa-cloud-bolt main-cloud"></i>
+                    <i class="fa-solid fa-cloud cloud-small"></i>
+                    <i class="fa-solid fa-cloud-rain rain-small"></i>
+                    <span class="weather-star">✦</span>
+                </div>
+
+                <div class="intro-bottom">
+                    <span><i class="fa-solid fa-shield-halved"></i> Seus registros organizados</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Sua região em foco</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="login-side">
+            <div class="login-card">
+                <div class="mobile-brand brand">
+                    <span class="brand-icon"><i class="fa-solid fa-cloud-bolt"></i></span>
+                    <span>Eventos <span class="brand-light">Climáticos</span></span>
+                </div>
+
+                <span class="form-label-top">BEM-VINDO DE VOLTA</span>
+                <h2>Acesse sua conta</h2>
+                <p class="form-description">Entre para gerenciar seus eventos climáticos.</p>
+
+                <form id="formLogin">
+                    <label for="email">E-mail</label>
+                    <div class="input-wrap">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input id="email" type="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <label for="senha">Senha</label>
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input id="senha" type="password" placeholder="Digite sua senha" required>
+                        <button type="button" id="togglePassword" class="toggle-password" aria-label="Mostrar senha">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <p id="mensagemLogin" class="message" role="status"></p>
+
+                    <button type="submit" id="btnEntrar" class="btn-primary full-button">
+                        Entrar na plataforma <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <p class="login-note">Acompanhe seus registros climáticos em um só lugar.</p>
+                <p class="copyright">© 2026 Eventos Climáticos</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>

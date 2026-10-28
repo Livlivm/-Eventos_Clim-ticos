@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Climáticos | Painel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="dashboard-page">
+    <aside class="sidebar">
+        <a class="brand" href="home.html">
+            <span class="brand-icon"><i class="fa-solid fa-cloud-bolt"></i></span>
+            <span>Eventos <span class="brand-light">Climáticos</span></span>
+        </a>
+
+        <p class="sidebar-caption">MENU PRINCIPAL</p>
+        <a href="home.html" class="sidebar-link active"><i class="fa-solid fa-house"></i> Visão geral</a>
+        <a href="#listaEventos" class="sidebar-link"><i class="fa-solid fa-cloud-showers-heavy"></i> Eventos climáticos</a>
+
+        <div class="sidebar-info">
+            <div class="info-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+            <strong>Fique por dentro</strong>
+            <p>Mantenha seus registros climáticos sempre atualizados.</p>
+        </div>
+
+        <div class="sidebar-bottom"><span class="online-dot"></span> Sistema conectado</div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="topbar">
+            <div>
+                <span class="breadcrumb">PAINEL / VISÃO GERAL</span>
+                <h1>Visão geral</h1>
+            </div>
+
+            <div class="topbar-actions">
+                <button class="icon-button" id="btnNovoTopo" title="Novo evento" aria-label="Novo evento">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="user-info">
+                    <div class="avatar" id="avatarUsuario">U</div>
+                    <div>
+                        <strong id="nomeUsuario">Usuário</strong>
+                        <span>Minha conta</span>
+                    </div>
+                </div>
+                <button class="btn-logout" id="btnSair"><i class="fa-solid fa-right-from-bracket"></i> Sair</button>
+            </div>
+        </header>
+
+        <section class="welcome-banner">
+            <div class="welcome-text">
+                <span class="eyebrow">● SEU PAINEL CLIMÁTICO</span>
+                <h2>Olá, <span id="nomeBoasVindas">tudo bem?</span></h2>
+                <p>Gerencie seus eventos e acompanhe os registros da sua região.</p>
+                <button class="btn-primary" id="btnNovoBanner"><i class="fa-solid fa-plus"></i> Cadastrar evento</button>
+            </div>
+            <div class="banner-illustration">
+                <div class="banner-circle"></div>
+                <i class="fa-solid fa-cloud-bolt"></i>
+                <span class="banner-spark">✦</span>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-top"><span>Total de eventos</span><span class="stat-icon blue"><i class="fa-solid fa-cloud"></i></span></div>
+                <strong id="totalEventos">0</strong>
+                <p>Registros cadastrados</p>
+            </article>
+            <article class="stat-card">
+                <div class="stat-top"><span>Cidades registradas</span><span class="stat-icon cyan"><i class="fa-solid fa-location-dot"></i></span></div>
+                <strong id="totalCidades">0</strong>
+                <p>Localidades distintas</p>
+            </article>
+            <article class="stat-card">
+                <div class="stat-top"><span>Alto impacto</span><span class="stat-icon violet"><i class="fa-solid fa-triangle-exclamation"></i></span></div>
+                <strong id="totalImpacto">0</strong>
+                <p>Eventos de alto impacto</p>
+            </article>
+        </section>
+
+        <section class="events-section" id="listaEventos">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">ACOMPANHAMENTO</span>
+                    <h2>Eventos climáticos</h2>
+                    <p>Visualize e gerencie todos os registros.</p>
+                </div>
+                <button class="btn-primary btn-new-event" id="btnNovoLista"><i class="fa-solid fa-plus"></i> Novo evento</button>
+            </div>
+
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="pesquisaEvento" type="search" placeholder="Buscar cidade ou tipo de evento...">
+                </div>
+                <button class="btn-refresh" id="btnAtualizarLista"><i class="fa-solid fa-rotate"></i> Atualizar</button>
+            </div>
+
+            <p id="mensagemEventos" class="message" role="status"></p>
+            <div class="events-list" id="eventosContainer"></div>
+        </section>
+
+        <footer class="dashboard-footer">
+            <span>© 2026 Eventos Climáticos</span>
+            <span>Seus registros, organizados em um só lugar.</span>
+        </footer>
+    </main>
+
+    <div class="modal-overlay" id="modalEvento">
+        <section class="event-modal" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+            <div class="modal-heading">
+                <div>
+                    <span class="section-kicker">REGISTRO CLIMÁTICO</span>
+                    <h2 id="tituloModal">Novo evento</h2>
+                    <p>Preencha as informações abaixo.</p>
+                </div>
+                <button class="modal-close" id="btnFecharModal" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="formEvento">
+                <label for="cidade">Cidade</label>
+                <div class="input-wrap"><i class="fa-solid fa-location-dot"></i><input id="cidade" type="text" placeholder="Ex.: Amparo" required></div>
+
+                <label for="tipoEvento">Tipo de evento</label>
+                <div class="input-wrap"><i class="fa-solid fa-cloud-bolt"></i><input id="tipoEvento" type="text" placeholder="Ex.: Tempestade" required></div>
+
+                <label for="temperaturaMaxima">Temperatura máxima (°C)</label>
+                <div class="input-wrap"><i class="fa-solid fa-temperature-high"></i><input id="temperaturaMaxima" type="number" step="0.1" placeholder="Ex.: 28"></div>
+
+                <label for="dataEvento">Data do evento</label>
+                <div class="input-wrap"><i class="fa-regular fa-calendar"></i><input id="dataEvento" type="date" required></div>
+
+                <label for="nivelImpacto">Nível de impacto</label>
+                <div class="input-wrap">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <select id="nivelImpacto" required>
+                        <option value="">Selecione o impacto</option>
+                        <option value="Baixo">Baixo</option>
+                        <option value="Moderado">Moderado</option>
+                        <option value="Alto">Alto</option>
+                        <option value="Crítico">Crítico</option>
+                    </select>
+                </div>
+
+                <p id="mensagemFormulario" class="message" role="status"></p>
+                <div class="modal-buttons">
+                    <button type="button" class="btn-cancel" id="btnCancelarModal">Cancelar</button>
+                    <button type="submit" class="btn-primary" id="btnSalvarEvento"><i class="fa-solid fa-check"></i> Salvar evento</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
